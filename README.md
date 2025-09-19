@@ -65,12 +65,12 @@ hyundai_dt/
 ├─ configs/
 │  └─ data.yaml
 └─ src/
-   ├─ main.py                
-   ├─ coco_split.py          
-   ├─ json2txt.py            
-   ├─ baseline.py          
-   ├─ only_val.py           
-   └─ coco_verification.py   
+   ├─ main.py
+   ├─ coco_split.py
+   ├─ json2txt.py
+   ├─ baseline.py
+   ├─ only_val.py
+   └─ coco_verification.py
 
 ---
 
