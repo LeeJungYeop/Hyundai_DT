@@ -81,7 +81,7 @@ hyundai_dt/
 | `src/json2txt.py`   | COCO → YOLO txt 변환 |
 | `src/baseline.py`   | 단일 YOLO 모델 학습 샘플 |
 | `src/only_val.py`   | 검증 이미지 예측/라벨 시각화 |
-| **`src/main.py`**   | 🔥 전체 파이프라인 (Split → 변환 → 학습 → 검증) |
+| **`src/main.py`**   | 전체 파이프라인 (Split → 변환 → 학습 → 검증) |
 
 ---
 
