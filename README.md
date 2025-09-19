@@ -51,26 +51,27 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 아래와 같은 디렉터리 구조를 맞춰주세요.
 
+```text
 hyundai_dt/
 ├─ data/
-│ ├─ images/
-│ │ ├─ A_site/
-│ │ │ ├─ train/.png
-│ │ │ └─ test/.png
-│ │ └─ B_site/...
-│ └─ labels/
-│ ├─ A_site.json
-│ ├─ B_site.json
-│ └─ ...
+│  ├─ images/
+│  │   ├─ A_site/
+│  │   │   ├─ train/*.png
+│  │   │   └─ test/*.png
+│  │   └─ B_site/...
+│  └─ labels/
+│      ├─ A_site.json
+│      ├─ B_site.json
+│      └─ ...
 ├─ configs/
-│ └─ data.yaml
+│  └─ data.yaml
 └─ src/
-├─ main.py
-├─ coco_split.py
-├─ json2txt.py
-├─ baseline.py
-├─ only_val.py
-└─ coco_verification.py
+   ├─ main.py
+   ├─ coco_split.py
+   ├─ json2txt.py
+   ├─ baseline.py
+   ├─ only_val.py
+   └─ coco_verification.py
 
 ---
 
