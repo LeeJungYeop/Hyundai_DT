@@ -17,20 +17,33 @@ COCO 형식의 어노테이션을 **YOLO 형식으로 변환**하고
 
 ---
 
-## 🔧 환경 세팅
+## 🔧 환경 세팅 (Docker 기준)
 
 ### ▸ 프로젝트 클론
 ```bash
-git clone <repo_url> Hyundai_DT
-cd Hyundai_DT
+git clone <repo_url> hyundai_dt
+cd hyundai_dt
 ```
 
-### ▸ Conda 환경 생성 및 패키지 설치
-아래 명령을 **한 번에 복사·실행**하면 Conda 환경 생성부터 패키지 설치까지 완료됩니다.
+### ▸ Docker 이미지 빌드 및 컨테이너 실행
+아래 명령을 **한 번에 복사·실행**하면 Docker 이미지 생성부터 컨테이너 실행까지 완료됩니다.
 ```bash
-conda create -n vision_env python=3.10 -y && conda activate vision_env && pip install -r requirements.txt
+# 1. 이미지 빌드
+docker build -t hyundai_dt .
+
+# 2. 컨테이너 실행 (GPU 사용 시 --gpus all 옵션 추가)
+docker run -it --name hyundai_dt_container --gpus all -v $(pwd):/workspace hyundai_dt /bin/bash
 ```
-> 💡 Docker를 사용할 경우 `requirements.txt`를 그대로 COPY 후 빌드하면 됩니다.
+
+> 💡 컨테이너 내부의 기본 작업 디렉터리는 `/workspace`입니다.
+
+Dockerfile 예시:
+```dockerfile
+FROM python:3.10
+WORKDIR /workspace
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+```
 
 ---
 
@@ -124,13 +137,13 @@ YOLOv9 또는 YOLOv10도 동일하게 실행 가능합니다.
 ---
 
 ## 👥 팀 공통 체크리스트
-- [ ] `requirements.txt` 설치 완료  
+- [ ] Docker 이미지 빌드 완료  
 - [ ] `data/` 폴더 구조 및 COCO json 배치 완료  
 - [ ] `configs/data.yaml` 클래스 수와 이름 확인  
 - [ ] `python src/main.py` 테스트 실행
 
 ---
 
-✨ 이제 팀원 누구나 **동일한 환경**에서  
+✨ 이제 팀원 누구나 **Docker 환경**에서  
 단 한 줄 명령으로 YOLO 파이프라인을 실행하고  
 여러 버전을 손쉽게 실험할 수 있습니다!
