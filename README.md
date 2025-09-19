@@ -1,4 +1,4 @@
-# 🚗 Hyundai_DT(Vision) End-to-End Pipeline
+# Hyundai_DT(Vision) End-to-End Pipeline
 
 이 프로젝트는 **비전 데이터**를 대상으로  
 COCO 형식의 어노테이션을 **YOLO 형식으로 변환**하고  
@@ -7,7 +7,7 @@ COCO 형식의 어노테이션을 **YOLO 형식으로 변환**하고
 
 ---
 
-## 📚 Tutorial Overview
+## Tutorial Overview
 이 저장소는 다음 순서대로 작업을 자동화합니다.
 
 - **COCO Split** : 이미지 폴더(train/test) 기준으로 COCO json을 `*_train.json`, `*_test.json`으로 분리  
@@ -35,7 +35,7 @@ docker build -t hyundai_dt .
 docker run -it --name hyundai_dt_container --gpus all -v $(pwd):/workspace hyundai_dt /bin/bash
 ```
 
-> 💡 컨테이너 내부의 기본 작업 디렉터리는 `/workspace`입니다.
+> 컨테이너 내부의 기본 작업 디렉터리는 `/workspace`입니다.
 
 Dockerfile 예시:
 ```dockerfile
@@ -47,7 +47,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ---
 
-## 📂 데이터 준비
+## 데이터 준비
 
 아래와 같은 디렉터리 구조를 맞춰주세요.
 
@@ -74,7 +74,7 @@ hyundai_dt/
 
 ---
 
-## ⚙️ 주요 실행 파일
+## 주요 실행 파일
 | 파일 | 설명 |
 |------|------|
 | `src/coco_split.py` | COCO json → train/test json 분리 |
@@ -85,7 +85,7 @@ hyundai_dt/
 
 ---
 
-## 🚀 빠른 시작 (One-Line 실행)
+## 빠른 시작 (One-Line 실행)
 
 아래 명령 한 줄로 **데이터 분리 → 변환 → 학습 → 검증**까지 자동 실행됩니다.
 
@@ -105,7 +105,7 @@ python src/main.py   --model yolov8n.pt   --imgsz 800   --epochs 100   --batch 1
 
 ---
 
-## 🔬 다양한 YOLO 버전 실험
+## 다양한 YOLO 버전 실험
 예를 들어 YOLOv8 small 모델을 학습하려면:
 ```bash
 python src/main.py --model yolov8s.pt --epochs 150
