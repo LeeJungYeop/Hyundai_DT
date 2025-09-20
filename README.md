@@ -32,7 +32,7 @@ cd hyundai_dt
 docker build -t hyundai_dt .
 
 # 2. 컨테이너 실행 (GPU 사용 시 --gpus all 옵션 추가)
-docker run -it --name hyundai_dt_container --gpus all -v $(pwd):/workspace hyundai_dt /bin/bash
+docker run -it --name hyundai_dt_container --gpus all -v ${PWD}:/workspace hyundai_dt /bin/bash
 ```
 
 > 컨테이너 내부의 기본 작업 디렉터리는 `/workspace`입니다.
