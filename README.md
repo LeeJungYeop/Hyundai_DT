@@ -3,11 +3,11 @@
 이 프로젝트는 **비전 데이터**를 대상으로  
 COCO 형식의 어노테이션을 **YOLO 형식으로 변환**하고  
 다양한 YOLO 버전(YOLOv8/9/10 등)을 **동일 환경에서 손쉽게 실험**할 수 있도록 만든  
-완전 자동화 파이프라인입니다.
+자동화 파이프라인입니다.
 
 ---
 
-## Tutorial Overview
+## Overview
 이 저장소는 다음 순서대로 작업을 자동화합니다.
 
 - **COCO Split** : 이미지 폴더(train/test) 기준으로 COCO json을 `*_train.json`, `*_test.json`으로 분리  
