@@ -29,7 +29,7 @@ cd hyundai_dt
 아래 명령을 **한 번에 복사·실행**하면 Docker 이미지 생성부터 컨테이너 실행까지 완료됩니다.
 ```bash
 # 1. 이미지 빌드
-docker build -t hyundai_dt .
+docker build -t hyundai_dt 
 
 # 2. 컨테이너 실행 (GPU 사용 시 --gpus all 옵션 추가)
 docker run -it --name hyundai_dt_container --gpus all -v $(pwd):/workspace hyundai_dt /bin/bash
