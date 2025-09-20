@@ -37,14 +37,6 @@ docker run -it --name hyundai_dt_container --gpus all -v ${PWD}:/workspace hyund
 
 > 컨테이너 내부의 기본 작업 디렉터리는 `/workspace`입니다.
 
-Dockerfile 예시:
-```dockerfile
-FROM python:3.10
-WORKDIR /workspace
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-```
-
 ---
 
 ## 데이터 준비
