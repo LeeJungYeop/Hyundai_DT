@@ -49,7 +49,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ## 데이터 준비
 
-아래와 같은 디렉터리 구조를 맞춰주세요.
+아래와 같은 디렉터리 구조를 맞춰주세요. 데이터는 알아서 넣어주세요.
 
 ```text
 hyundai_dt/
