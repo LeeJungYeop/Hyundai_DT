@@ -82,7 +82,7 @@ COCO 분리 와 YOLO txt 변환은 이미 완료되었으므로
 python src/main.py --model yolov8n.pt --imgsz 800 --epochs 100 --batch 16 --skip_prepare
 ```
 > `--skip_prepare` 옵션을 주면 COCO 분리와 txt 변환 단계를 건너뛰고  
-> 기존 전처리 데이터를 그대로 사용해 학습만 진행합니다.
+> 분리된 데이터를 그대로 사용해 학습만 진행합니다.
 
 ### 주요 옵션
 | 옵션 | 설명 | 기본값 |
